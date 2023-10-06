@@ -6,9 +6,17 @@
     <title>Etch-a-Sketch</title>
 
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer />
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="container"></div>
+    <h1>Etch-a-Sketch</h1>
+    <div class="buttons">
+      <button id="reset">Reset</button>
+      <div class="sizeSlider">
+        <input type="range" min="2" max="100" value="16" id="slider" />
+        <p class="value">16</p>
+      </div>
+    </div>
+    <div class="grid"></div>
   </body>
 </html>
