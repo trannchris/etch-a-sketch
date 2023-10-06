@@ -43,8 +43,8 @@ button:active {
   border: 5px solid white;
   border-radius: 5px;
   background-color: gray;
-  height: 575px;
-  width: 575px;
+  height: 675px;
+  width: 675px;
 }
 
 .gridCell {
