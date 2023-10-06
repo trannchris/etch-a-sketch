@@ -11,11 +11,15 @@ createGrid = () => {
   }
 };
 
-function removeAllChildNodes(parent) {
+removeAllChildNodes = (parent) => {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
-}
+};
+
+chooseRandomColor = () => {
+  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+};
 
 const slider = document.querySelector("#slider");
 const sizeValue = document.querySelector(".value");
@@ -43,6 +47,17 @@ resetButton.addEventListener("click", function () {
   let gridCells = grid.children;
   for (let i = 0; i < size ** 2; i++) {
     gridCells[i].style.backgroundColor = "white";
+  }
+});
+
+const rainbow = document.querySelector("#rainbow");
+rainbow.addEventListener("click", function () {
+  let size = document.querySelector("#slider").value;
+  let gridCells = grid.children;
+  for (let i = 0; i < size ** 2; i++) {
+    gridCells[i].addEventListener("mouseover", function (event) {
+      event.target.style.backgroundColor = chooseRandomColor();
+    });
   }
 });
 
