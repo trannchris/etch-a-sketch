@@ -37,6 +37,13 @@ slider.addEventListener("input", function () {
   }
 });
 
-resetGrid = () => {};
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener("click", function () {
+  let size = document.querySelector("#slider").value;
+  let gridCells = grid.children;
+  for (let i = 0; i < size ** 2; i++) {
+    gridCells[i].style.backgroundColor = "white";
+  }
+});
 
 createGrid();
